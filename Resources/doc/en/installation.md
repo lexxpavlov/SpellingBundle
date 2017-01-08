@@ -224,7 +224,7 @@ lexxpavlov_spelling:
 ```
 
 If you are not using the bundle SonataAdminBundle, then import only 
-`@LexxpavlovSpellingBundle/Resources/config/routing/routing.yml`.`` 
+`@LexxpavlovSpellingBundle/Resources/config/routing/routing.yml`.
 
 ## Step 5 - Configure the bundle
 

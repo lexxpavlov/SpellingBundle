@@ -223,7 +223,7 @@ lexxpavlov_spelling:
 ```
 
 Если вы не используете бандл SonataAdminBundle, то импортируйте только 
-`@LexxpavlovSpellingBundle/Resources/config/routing/routing.yml`.`` 
+`@LexxpavlovSpellingBundle/Resources/config/routing/routing.yml`.
 
 ## Шаг 5 - Настройка бандла
 
