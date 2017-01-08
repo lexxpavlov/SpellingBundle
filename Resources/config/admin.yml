@@ -1,0 +1,56 @@
+services:
+    
+    lexxpavlov_spelling.admin.errors:
+        class: Lexxpavlov\SpellingBundle\Admin\ErrorsAdmin
+        tags:
+            - name: sonata.admin
+              manager_type: orm
+              group: "lexxpavlov_spelling"
+              label: "Errors"
+              label_catalogue: "LexxpavlovSpellingBundle"
+              icon: "<i class=\"fa fa-check-square-o\"></i>"
+        arguments:
+            - ~
+            - "%lexxpavlov_spelling.entity_class%"
+            - LexxpavlovSpellingBundle:SpellingCRUD
+        calls:
+            - [ setTranslationDomain, [LexxpavlovSpellingBundle]]
+            - [ setTemplate, [list, LexxpavlovSpellingBundle:Sonata:list.html.twig]]
+
+    lexxpavlov_spelling.admin.corrected:
+        class: Lexxpavlov\SpellingBundle\Admin\CorrectedAdmin
+        tags:
+            - name: sonata.admin
+              manager_type: orm
+              group: "lexxpavlov_spelling"
+              label: "Corrected errors"
+              label_catalogue: "LexxpavlovSpellingBundle"
+              icon: "<i class=\"fa fa-check-square-o\"></i>"
+        arguments:
+            - ~
+            - "%lexxpavlov_spelling.entity_class%"
+            - ~
+        calls:
+            - [ setTranslationDomain, [LexxpavlovSpellingBundle]]
+            - [ setTemplate, [list, LexxpavlovSpellingBundle:Sonata:list.html.twig]]
+
+    lexxpavlov_spelling.admin.banned:
+        class: Lexxpavlov\SpellingBundle\Admin\BannedAdmin
+        tags:
+            - name: sonata.admin
+              manager_type: orm
+              group: "lexxpavlov_spelling"
+              label: "Banned IPs"
+              label_catalogue: "LexxpavlovSpellingBundle"
+              icon: "<i class=\"fa fa-check-square-o\"></i>"
+        arguments:
+            - ~
+            - "%lexxpavlov_spelling.security.entity_class%"
+            - ~
+        calls:
+            - [ setTranslationDomain, [LexxpavlovSpellingBundle]]
+
+    lexxpavlov_spelling.listener.menu_builder:
+        class: Lexxpavlov\SpellingBundle\EventListener\MenuBuilderListener
+        tags:
+            -  { name: kernel.event_listener, event: sonata.admin.event.configure.menu.sidebar, method: addMenuItems }

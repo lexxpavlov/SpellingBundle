@@ -1,0 +1,24 @@
+Lexxpavlov\SpellingBundle\Entity\SpellingSecurity:
+    type: mappedSuperclass
+    uniqueConstraints:
+        ip_idx:
+            columns: [ ip ]
+    indexes:
+        last_query_idx:
+            columns: [ lastQuery ]
+        banned_until_idx:
+            columns: [ bannedUntil ]
+    fields:
+        ip:
+            type: string
+            length: 45
+        lastQuery:
+            type: datetime
+        count:
+            type: integer
+        errorTime:
+            type: datetime
+            nullable: true
+        bannedUntil:
+            type: datetime
+            nullable: true

@@ -1,0 +1,14 @@
+{% extends 'LexxpavlovSpellingBundle:Logo:empty.html.twig' %}
+{% trans_default_domain trans_domain|default("LexxpavlovSpellingBundle") %}
+
+{% block content %}
+    <div class="lx-spelling-logo_text lx-spelling-logo_text__top{% block text_class %}{{ text_class }}{% endblock %}{% block text_class_top %}{{ text_class_top }}{% endblock %}">
+        {{ (text_top ?? 'spelling_button_top'|trans)|raw }}
+    </div>
+    <div class="lx-spelling-logo_text lx-spelling-logo_text__center{{ block('text_class') }}{% block text_class_center %}{{ text_class_center }}{% endblock %}">
+        {{ (text_center ?? 'spelling_button_center'|trans)|raw }}
+    </div>
+    <div class="lx-spelling-logo_text lx-spelling-logo_text__bottom{{ block('text_class') }}{% block text_class_bottom %}{{ text_class_bottom }}{% endblock %}">
+        {{ (text_bottom ?? 'spelling_button_bottom'|trans)|raw }}
+    </div>
+{% endblock %}

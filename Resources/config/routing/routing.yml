@@ -1,0 +1,4 @@
+lexxpavlov_spelling_new_error:
+    path:     /new-error
+    defaults: { _controller: LexxpavlovSpellingBundle:Spelling:error }
+    methods: [ POST ]

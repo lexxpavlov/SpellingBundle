@@ -1,0 +1,3 @@
+lexxpavlov_spelling_contribute:
+    path:     /lexxpavlov/spelling/contribute
+    defaults: { _controller: LexxpavlovSpellingBundle:Spelling:contribute }

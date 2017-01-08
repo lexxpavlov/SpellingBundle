@@ -1,0 +1,45 @@
+# Sonata admin
+lexxpavlov_spelling: Spelling
+Spelling List: Spelling
+Spelling Security List: Spelling - Spelling Security
+Errors: Errors
+Corrected errors: Corrected errors
+Banned IPs: Banned IPs
+Correctors contribute: Correctors contribute
+Number of fixes: Number of fixes
+Action: Action
+Correction: Correction
+Correct: Correct
+OK: OK
+Ip: IP-address
+Banned Until: Banned until
+
+# Entity fields
+Url: Url
+Text: Text
+Comment: Comment
+Сorrected: Сorrected
+Created: Created
+Updated: Updated
+Creator: Creator
+Corrector: Corrector
+
+# HTML form
+form_title: Correct of error
+form_subtitle: Send message to author?
+form_info: Your browser will remain on the same page.
+form_input_label: Comment for author, optional:
+Loading: Loading...
+Send: Send
+Cancel: Cancel
+
+# Button
+spelling_button_top: Error?
+spelling_button_center: Select with mouse and press
+spelling_button_bottom: Ctrl+Enter
+
+# Errors
+database_error: Database error
+access_denied: Access denied
+too_much_errors: Too much errors
+ip_banned: IP-address banned

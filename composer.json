@@ -1,0 +1,28 @@
+{
+    "name" : "lexxpavlov/spellingbundle",
+    "description" : "Symfony2/3 Spelling bundle provides spelling check by users",
+    "version" : "1.0.0",
+    "type" : "symfony-bundle",
+    "homepage": "https://github.com/lexxpavlov/SpellingBundle",
+    "license" : "MIT",
+    "keywords" : ["spelling", "typo", "misprint", "mistake", "error", "error correct", "symfony", "bundle"],
+    "authors" : [{
+        "name" : "Alexey Pavlov",
+        "email" : "lexx.pavlov@gmail.com"
+    }],
+    "require" : {
+        "php": ">=5.4",
+        "symfony/symfony": ">=2.7"
+    },
+    "suggest": {
+        "sonata-project/admin-bundle": "Allow use Sonata administration panel"
+    },
+    "autoload" : {
+        "psr-4" : { "Lexxpavlov\\SpellingBundle\\" : "" }
+    },
+    "extra" : {
+        "branch-alias" : {
+            "dev-master" : "1.x-dev"
+        }
+    }
+}

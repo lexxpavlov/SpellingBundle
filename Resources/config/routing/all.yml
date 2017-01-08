@@ -1,0 +1,7 @@
+import_routing:
+    resource: "@LexxpavlovSpellingBundle/Resources/config/routing/routing.yml"
+    prefix: /spelling
+
+import_routing_sonata:
+    resource: "@LexxpavlovSpellingBundle/Resources/config/routing/sonata.yml"
+    prefix: /admin

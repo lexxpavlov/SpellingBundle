@@ -1,0 +1,13 @@
+services:
+    lexxpavlov_spelling.listener.flood_control:
+        class: Lexxpavlov\SpellingBundle\Feature\FloodControl
+        arguments:
+          - "@doctrine.orm.entity_manager"
+          - "@request_stack"
+          - "%lexxpavlov_spelling.security.entity_class%"
+          - "%lexxpavlov_spelling.security.query_interval%"
+          - "%lexxpavlov_spelling.security.ban_period%"
+          - "%lexxpavlov_spelling.security.ban_check_period%"
+          - "%lexxpavlov_spelling.security.ban_count%"
+        tags:
+            - { name: kernel.event_listener, event: lexxpavlov_spelling.new_error, method: onNewError, priority: 100 }

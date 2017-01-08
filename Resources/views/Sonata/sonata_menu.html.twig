@@ -1,0 +1,32 @@
+{% extends 'SonataAdminBundle:Menu:sonata_menu.html.twig' %}
+
+{% import 'knp_menu.html.twig' as knp_menu %}
+
+{% block spanElement %}
+    {% spaceless %}
+        <a href="#">
+            {% set translation_domain = item.extra('label_catalogue') %}
+            {% set icon = item.extra('icon', '') %}
+            {{ icon|raw }}
+
+            {% block spanElementContent %}
+                <span{{ knp_menu.attributes(item.labelAttributes) }}>
+                    {{ block('label') }}
+                </span>
+            {% endblock %}
+            <span class="pull-right-container">
+                {% block spanElementPull %}
+                    <i class="fa pull-right fa-angle-left"></i>
+
+                    {% block spanElementPullSpelling %}
+                        {% if item.name == 'lexxpavlov_spelling' and spelling_count() > 0 %}
+                            <span class="badge label-danger pull-right" style="margin-top: 0">
+                                {{- spelling_count() -}}
+                            </span>
+                        {% endif %}
+                    {% endblock %}
+                {% endblock %}
+            </span>
+        </a>
+    {% endspaceless %}
+{% endblock %}

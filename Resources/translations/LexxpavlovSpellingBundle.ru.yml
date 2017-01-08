@@ -1,0 +1,45 @@
+# Sonata admin
+lexxpavlov_spelling: Орфография
+Spelling List: Орфография
+Spelling Security List: Орфография - Запрещённые адреса
+Errors: Ошибки
+Corrected errors: Исправленные
+Banned IPs: Запрещённые адреса
+Correctors contribute: Вклад корректоров
+Number of fixes: Количество исправлений
+Action: Действия
+Correction: Исправление
+Correct: Исправить
+OK: OK
+Ip: IP-адрес
+Banned Until: Запрещён до
+
+# Entity fields
+Url: Ссылка
+Text: Текст
+Comment: Комментарий
+Сorrected: Исправлено
+Created: Создано
+Updated: Изменено
+Creator: Создатель
+Corrector: Корректор
+
+# HTML form
+form_title: Исправление ошибки
+form_subtitle: Послать сообщение автору?
+form_info: Ваш браузер останется на той же странице.
+form_input_label: Комментарий для автора, необязательно:
+Loading: Загрузка...
+Send: Отправить
+Cancel: Отменить
+
+# Button
+spelling_button_top: Ошибка?
+spelling_button_center: Выделите ошибку мышкой и нажмите
+spelling_button_bottom: Ctrl+Enter
+
+# Errors
+database_error: Ошибка базы данных
+access_denied: Доступ запрещён
+too_much_errors: Слишком много запросов
+ip_banned: IP-адрес заблокирован

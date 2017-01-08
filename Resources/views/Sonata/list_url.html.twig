@@ -1,0 +1,6 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+{% set url = spelling_url(object.url) %}
+<a href="{{ url }}">{{ url }}</a>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+{% trans_default_domain "LexxpavlovSpellingBundle" %}
+
+{% block field %}
+{% set correcting_link = spelling_correcting_link(object.url) %}
+{% if correcting_link %}
+ <a href="{{ correcting_link }}" style="white-space:nowrap"><i class="fa fa-pencil-square-o"></i>&nbsp;{{ 'Correct'|trans }}</a>
+{% endif %}
+{% endblock %}

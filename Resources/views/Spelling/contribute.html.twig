@@ -1,0 +1,53 @@
+{% extends admin_pool.template('layout') %}
+{% trans_default_domain "LexxpavlovSpellingBundle" %}
+
+{% block sonata_breadcrumb %}
+<div class="navbar-left">
+    <div class="hidden-xs">
+        <ol class="nav navbar-top-links breadcrumb">
+            <li>
+                <a href="{{ path('sonata_admin_dashboard') }}">
+                    {{ 'Dashboard'|trans({}, 'SonataAdminBundle') }}
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('admin_lexxpavlov_spelling_list') }}">
+                    {{ 'Spelling List'|trans }}
+                </a>
+            </li>
+            <li class="active"><span>{{ 'Contribute'|trans }}</span></li>
+        </ol>
+    </div>
+</div>
+{% endblock %}
+
+{% block sonata_admin_content %}
+
+<div class="col-md-6 col-lg-4">
+    <div class="panel panel-info">
+        <div class="panel-heading">{{ 'Contribute'|trans }}</div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr class="sonata-ba-list-field-header">
+                    <th>{{ 'Corrector'|trans }}</th>
+                    <th>{{ 'Number of fixes'|trans }}</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for item in stat %}
+                <tr>
+                    <td class="sonata-ba-list-field sonata-ba-list-field-text">
+                        {{ attribute(item.spelling.corrector, user_field) }}
+                    </td>
+                    <td class="sonata-ba-list-field sonata-ba-list-field-num">
+                        {{ item.cnt }}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
+

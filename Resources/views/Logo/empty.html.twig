@@ -1,0 +1,18 @@
+{% trans_default_domain trans_domain|default("LexxpavlovSpellingBundle") %}
+
+{% set parent_class = parent_class is defined ? ' ' ~ parent_class : '' %}
+{% set text_class = text_class is defined ? ' ' ~ text_class : '' %}
+{% set text_class_top = text_class_top is defined ? ' ' ~ text_class_top : '' %}
+{% set text_class_center = text_class_center is defined ? ' ' ~ text_class_center : '' %}
+{% set text_class_bottom = text_class_bottom is defined ? ' ' ~ text_class_bottom : '' %}
+
+<div class="lx-spelling-logo{% block parent_class %}{{ parent_class }}{% endblock %}" style="{% block style_parent -%}
+	{{- width is defined ? "width:#{width};" -}}
+	{{- height is defined ? "height:#{height};" -}}
+{% endblock %}">
+{% block icon %}
+	<i class="lx-spelling-icon lx-spelling-icon__24 lx-spelling-icon__logo"></i>
+{% endblock %}
+{% block content %}
+{% endblock %}
+</div>

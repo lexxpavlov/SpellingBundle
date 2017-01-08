@@ -1,0 +1,64 @@
+{% trans_default_domain "LexxpavlovSpellingBundle" %}
+
+<div class="lx-spelling-overlay js-spelling-container">
+	<div class="lx-spelling-wrapper">
+		<div class="lx-spelling">
+			{% block title -%}
+			<div class="lx-spelling_title">
+				{% block title_icon -%}
+                    <i class="lx-spelling-icon lx-spelling-icon__24"></i>
+                {% endblock -%}
+				{{ 'form_title'|trans }}
+			</div>
+			{% endblock %}
+			{%- block error_text %}<div class="lx-spelling_error-text js-spelling-error">
+			</div>{% endblock %}
+
+			<div class="lx-spelling_send-container">
+				{% block subtitle %}<div class="lx-spelling_sub-title">{{ 'form_subtitle'|trans }}</div>{% endblock %}
+
+				{% block info %}<div class="lx-spelling_info">{{ 'form_info'|trans|raw }}</div>{% endblock %}
+
+				<div class="lx-spelling-form">
+					{% block comment_container -%}
+					<div class="lx-spelling-form_input-wrapper">
+						{% block comment_label -%}
+                            <label class="lx-spelling-form_label" for="lx-spelling_comment_input">{{ 'form_input_label'|trans }}</label>
+                        {% endblock %}
+						{%- block comment_input -%}
+                            <textarea id="lx-spelling_comment_input" class="lx-spelling-form_input js-spelling-comment"></textarea>
+                        {%- endblock %}
+
+					</div>
+					{% endblock %}
+
+					{% block form_buttons -%}
+					<div class="lx-spelling-form_btn-wrapper">
+						{% block form_button_left %}<button class="lx-spelling-form_button lx-spelling-form_button__submit js-spelling-send">{{ 'Send'|trans }}</button>{% endblock %}
+
+						{% block form_button_right %}<a href="#" class="lx-spelling-form_button lx-spelling-form_button__cancel js-spelling-close">{{ 'Cancel'|trans }}</a>{% endblock %}
+
+					</div>
+					{% endblock %}
+
+					{%- block loading -%}
+					<div class="lx-spelling-loading js-spelling-loading">
+						{{ 'Loading'|trans|raw }}
+					</div>
+					{% endblock %}
+
+					{%- block errors -%}
+					<ul class="lx-spelling-errors js-spelling-errors"></ul>
+					{% endblock %}
+
+				</div>
+				{% block after_form %}{% endblock %}
+
+			</div>
+			{%- block after_content %}{% endblock %}
+
+			{% block close_button %}<div class="lx-spelling_close-btn js-spelling-close"></div>{% endblock %}
+
+		</div>
+	</div>
+</div>

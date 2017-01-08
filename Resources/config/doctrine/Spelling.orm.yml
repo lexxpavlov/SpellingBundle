@@ -1,0 +1,27 @@
+Lexxpavlov\SpellingBundle\Entity\Spelling:
+    type: mappedSuperclass
+    indexes:
+        corrected_idx:
+            columns: [ corrected ]
+    fields:
+        url:
+            type: string
+            length: 255
+        prefix:
+            type: text
+            nullable: true
+        error:
+            type: text
+        suffix:
+            type: text
+            nullable: true
+        comment:
+            type: text
+            nullable: true
+        corrected:
+            type: boolean
+        created:
+            type: datetime
+        updated:
+            type: datetime
+            nullable: true

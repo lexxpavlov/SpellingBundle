@@ -1,0 +1,17 @@
+services:
+    lexxpavlov_spelling.service.spelling:
+        class: Lexxpavlov\SpellingBundle\Service\Spelling
+        arguments:
+            - "@doctrine.orm.entity_manager"
+            - "@router"
+            - "@event_dispatcher"
+            - "@security.token_storage"
+            - "%lexxpavlov_spelling.entity_class%"
+            - "%lexxpavlov_spelling.find_by%"
+            - "%lexxpavlov_spelling.data_delimiter%"
+            - "%lexxpavlov_spelling.error_trans_domain%"
+
+    lexxpavlov_spelling.twig.spelling_extension:
+        class: Lexxpavlov\SpellingBundle\Twig\SpellingExtension
+        arguments: ["@lexxpavlov_spelling.service.spelling"]
+        tags: [{ name: twig.extension }]

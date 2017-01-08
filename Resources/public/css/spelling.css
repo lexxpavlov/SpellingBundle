@@ -1,0 +1,205 @@
+.spelling-error {
+    color: red;
+}
+.lx-spelling-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.4);
+}
+.lx-spelling-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    min-width: 400px;
+    max-width: 600px;
+}
+.lx-spelling {
+    padding: 2em;
+    background: #f2f2f2;
+    font-size: 14px;
+    color: black;
+}
+.lx-spelling_title {
+    font-size: 1.8em;
+    color: #333;
+    padding-bottom: 1em;
+}
+.lx-spelling_error-text {
+    background: white;
+    margin: 0 -2em;
+    padding: 2em;
+}
+.lx-spelling_send-container {
+    padding-top: 3em;
+}
+.lx-spelling_sub-title {
+    font-size: 1.6em;
+    color: #333;
+    font-weight: 300;
+}
+.lx-spelling_info, .lx-spelling-form_label {
+    font-size: 1.2em;
+    color: #000;
+    margin: 1em 0 1.5em;
+}
+.lx-spelling-form_label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+.lx-spelling-form_input {
+    background: #fff;
+    width: 100%;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 1.4em;
+    font-weight: 300;
+    padding: 0.5em;
+    color: #4d4d4d;
+    border-radius: 0;
+}
+.lx-spelling-form_input-wrapper {
+    margin-bottom: 2.7em;
+}
+.lx-spelling-form_button {
+    display: inline-block;
+    padding: 1em 0;
+    width: 45%;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: .8;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.15);
+    -webkit-transition: border-color .3s ease,background .3s ease,color .3s ease;
+    transition: border-color .3s ease,background .3s ease,color .3s ease;
+}
+.lx-spelling-form_button__cancel {
+    float: right;
+    box-sizing: border-box;
+    background: #fff;
+}
+.lx-spelling-loading {
+    display: none;
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+.lx-spelling-errors {
+    margin: 1em 1em 0;
+    list-style-type: disc;
+    font-size: 1.2em;
+}
+.lx-spelling-errors li {
+    color: red;
+}
+.lx-spelling_close-btn {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    width: 20px;
+    height: 20px;
+    background: url('../images/spelling-close-btn.png') no-repeat center center transparent;
+    cursor: pointer;
+}
+
+.lx-spelling-icon {
+    display: inline-block;
+    background: url("../images/spelling-icon.png") no-repeat 0 0 transparent;
+}
+.lx-spelling-icon__24 {
+    width: 24px;
+    height: 24px;
+}
+.lx-spelling-icon__20 {
+    width: 20px;
+    height: 20px;
+    background-position: -24px 0;
+}
+.lx-spelling-icon__18 {
+    width: 18px;
+    height: 18px;
+    background-position: -44px 0;
+}
+.lx-spelling-icon__16 {
+    width: 16px;
+    height: 16px;
+    background-position: -62px 0;
+}
+.lx-spelling-icon__14 {
+    width: 14px;
+    height: 14px;
+    background-position: -78px 0;
+}
+
+.lx-spelling-logo {
+    display: table;
+    position: relative;
+    border: 1px black solid;
+    background: white;
+    width: 88px;
+    height: 31px;
+}
+.lx-spelling-logo:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.lx-spelling-icon__logo {
+    margin: 3px;
+    vertical-align: middle;
+}
+.lx-spelling-logo_text {
+    display: table-cell;
+    position: absolute;
+    left: 32px;
+    right: 4px;
+    text-align: center;
+    font-size: 12px;
+}
+.lx-spelling-logo_text__top {
+    top: 2px;
+}
+.lx-spelling-logo_text__bottom {
+    bottom: 2px;
+}
+.lx-spelling-logo_text__center {
+    position: relative;
+    vertical-align: middle;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 640px) {
+    .lx-spelling-wrapper {
+        width: 80%;
+        height: 80%;
+        min-width: 240px;
+        max-width: 320px;
+    }
+    .lx-spelling {
+        padding: 1em 2em;
+        font-size: 10px;
+    }
+    .lx-spelling_title {
+        padding-top: 1em;
+    }
+    .lx-spelling_title > .lx-spelling-icon__24 {
+        display: none;
+    }
+    .lx-spelling_send-container {
+        padding: 1em 0;
+    }
+    .lx-spelling-form_button {
+        font-size: 1.2em;
+    }
+}

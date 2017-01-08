@@ -1,0 +1,8 @@
+{% extends 'LexxpavlovSpellingBundle:Logo:empty.html.twig' %}
+{% trans_default_domain trans_domain|default("LexxpavlovSpellingBundle") %}
+
+{% block content %}
+    <div class="lx-spelling-logo_text lx-spelling-logo_text__center{% block text_class %}{{ text_class }}{% endblock %}{% block text_class_center %}{{ text_class_center }}{% endblock %}">
+        {{ (text_center ?? 'spelling_button_center'|trans)|raw }}
+    </div>
+{% endblock %}

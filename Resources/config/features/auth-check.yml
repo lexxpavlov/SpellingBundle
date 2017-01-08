@@ -1,0 +1,6 @@
+services:
+    lexxpavlov_spelling.listener.auth_check:
+        class: Lexxpavlov\SpellingBundle\Feature\AuthCheck
+        arguments: [ "@security.token_storage", "@security.authorization_checker", "%lexxpavlov_spelling.security.allowed_role%" ]
+        tags:
+            - { name: kernel.event_listener, event: lexxpavlov_spelling.new_error, method: onNewError, priority: 50 }
