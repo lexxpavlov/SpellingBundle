@@ -156,7 +156,7 @@ class Spelling extends BaseSpelling
 Пример yaml-конфига создания сущности Spelling:
 ```yaml
 # src/AppBundle/Resources/config/doctrine/Spelling.orm.yml
-AppBundle\Entity\Spelling
+AppBundle\Entity\Spelling:
     type: entity
     table: spelling
     id:
@@ -203,7 +203,7 @@ class SpellingSecurity extends BaseSpellingSecurity
 Пример yaml-конфига создания сущности SpellingSecurity:
 ```yaml
 # src/AppBundle/Resources/config/doctrine/SpellingSecurity.orm.yml
-AppBundle\Entity\SpellingSecurity
+AppBundle\Entity\SpellingSecurity:
     type: entity
     table: spelling_security
     id:
