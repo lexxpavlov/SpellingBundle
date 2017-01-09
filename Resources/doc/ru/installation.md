@@ -303,8 +303,8 @@ $ php bin/console doctrine:schema:update --force
 ...
 {% block javascripts %}
 ...
-<script src="{{ asset('bundles/lexxpavlovspelling/js/rangy-core.js') }}></script>
-<script src="{{ asset('bundles/lexxpavlovspelling/js/spelling.js') }}></script>
+<script src="{{ asset('bundles/lexxpavlovspelling/js/rangy-core.js') }}"></script>
+<script src="{{ asset('bundles/lexxpavlovspelling/js/spelling.js') }}"></script>
 {% endblock %}
 ```
 
