@@ -1,7 +1,7 @@
 {
     "name" : "lexxpavlov/spellingbundle",
     "description" : "Symfony2/3 Spelling bundle provides spelling check by users",
-    "version" : "1.0.0",
+    "version" : "1.0.1",
     "type" : "symfony-bundle",
     "homepage": "https://github.com/lexxpavlov/SpellingBundle",
     "license" : "MIT",
