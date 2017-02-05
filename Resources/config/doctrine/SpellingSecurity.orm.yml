@@ -10,20 +10,20 @@ Lexxpavlov\SpellingBundle\Entity\SpellingSecurity:
             columns: [ banned_until ]
     fields:
         ip:
-            type: string
-            length: 45
-            name: ip
+            type:     string
+            length:   45
+            column:   ip
         lastQuery:
-            type: datetime
-            name: last_query
+            type:     datetime
+            column:   last_query
         count:
-            type: integer
-            name: count
+            type:     integer
+            column:   count
         errorTime:
-            type: datetime
-            name: error_time
+            type:     datetime
+            column:   error_time
             nullable: true
         bannedUntil:
-            type: datetime
-            name: banned_until
+            type:     datetime
+            column:   banned_until
             nullable: true
